@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+     <div class="col">
+        <img src="/img/add.svg" alt="" srcset="">
+
+     </div>
+
+    <div class="col">
+      <form action="/api/product/{{product._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group mb-4">
+          <label for="_id">#</label>
+          <input
+            type="text"
+            class="form-control"
+            disable value="{{product._id}}"
+            name="_id"
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="Nombre">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            value="{{product.name}}"
+            name="name"
+
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="Price">Precio</label>
+          <input
+            type="number"
+            class="form-control"
+            value="{{product.price}}"
+            name="price"
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="category">Categoria</label>
+          <select class="form-control" id="category" name="category">
+            <option selected>{{product.category}}</option>
+            <option>Computers</option>
+            <option>Phones</option>
+            <option>Accesories</option>
+          </select>
+        </div>
+        <div class="form-group mb-4">
+          <label for="description">Descripcion</label>
+          <input
+            type="text"
+            class="form-control"
+            value="{{product.description}}"
+            name="description"
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="picture">Picture</label>
+          <input
+            type="text"
+            class="form-control"
+            value="{{product.picture}}"
+            name="picture"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">ACTUALIZAR</button>
+      </form>
+    </div>
+   
+  </div>
+</div>

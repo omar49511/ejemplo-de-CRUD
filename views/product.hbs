@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+     <div class="col">
+        <img src="/img/add.svg" alt="" srcset="">
+
+     </div>
+
+    <div class="col">
+      <form action="/api/product" method="POST">
+
+        <div class="form-group mb-4">
+          <label for="Nombre">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            value=""
+            name="name"
+            placeholder="Nombre"
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="Price">Precio</label>
+          <input
+            type="number"
+            class="form-control"
+            value=""
+            placeholder="Introduce un precio"
+            name="price"
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="category">Categoria</label>
+          <select class="form-control" id="category" name="category">
+            <option>Computers</option>
+            <option>Phones</option>
+            <option>Accesories</option>
+          </select>
+        </div>
+        <div class="form-group mb-4">
+          <label for="description">Descripcion</label>
+          <input
+            type="text"
+            class="form-control"
+            value=""
+            placeholder="Escribe una descripcion"
+            name="description"
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label for="picture">Picture</label>
+          <input
+            type="text"
+            class="form-control"
+            value=""
+            placeholder="Url para la imagen"
+            name="picture"
+          />
+        </div>
+        <button type="submit" class="btn btn-success">GUARDAR</button>
+      </form>
+    </div>
+   
+  </div>
+</div>

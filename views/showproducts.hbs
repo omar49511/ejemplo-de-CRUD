@@ -1,0 +1,37 @@
+<div class="container">
+
+<table class="table mt-5">
+  <thead class="text-center">
+    <tr>
+      <th class="col">#</th>
+      <th class="col">Nombre</th>
+      <th class="col">Precio</th>
+      <th class="col">Categoria</th>
+      <th class="col">Descripcion</th>
+      <th class="col">Imagen</th>
+      <th class="col">Opciones </th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    {{#products}}
+    <tr>
+      <td>{{_id}}</td>
+      <td>{{name}}</td>
+      <td>{{price}}</td>
+      <td>{{category}}</td>
+      <td>{{description}}</td>
+      <td>{{picture}}</td>
+      <td class="d-flex justify-content-around">
+      <form action="/api/product/{{_id}}" method="GET">
+        <button type="submit" class="btn btn-primary">ACTUALIZAR</button>
+      </form>
+      <form action="/api/product/{{_id}}?_method=delete" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit"class="btn btn-danger">ELIMINAR</button>
+      </form>
+      </td>
+    </tr>
+    {{/products}}
+  </tbody>
+</table>
+</div>
